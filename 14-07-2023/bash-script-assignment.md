@@ -107,16 +107,141 @@ Some bash operators include: <br>
      **Output**
      Exponential = 100
 
+**Relational Operators:**
+   Relational operators are those operators which define the relation between two operands. They give either true or false depending upon the relation. They are of 6 types:
+
+   1. **‘==’ Operator:** Double equal to operator compares the two operands. It returns true if they are equal otherwise returns false.
+      ```
+      if(( $a==$b )) 
+      then 
+         echo a is equal to b. 
+      else  
+         echo a is not equal to b. 
+      fi
+      ```
+   2. **‘!=’ Operator:** Not Equal to operator return true if the two operands are not equal otherwise it returns false.
+       if(( $a!=$b )) 
+       then 
+          echo a is not equal to b. 
+       else
+          echo a is equal to b. 
+   fi 
+   3. **‘<‘ Operator:** Less than operator returns true if the first operand is less than the second operand otherwise returns false.
+      if(( $a<$b )) 
+      then 
+         echo a is less than b. 
+      else
+         echo a is not less than b. 
+      fi 
+   4. **‘<=’ Operator:** Less than or equal to the operator returns true if the first operand is less than or equal to the second operand otherwise returns false.
+      if(( $a<=$b )) 
+      then 
+         echo a is less than or equal to b. 
+      else
+         echo a is not less than or equal to b. 
+   fi 
+   5 **‘>’ Operator:** Greater than operator returns true if the first operand is greater than the second operand otherwise returns false.
+      if(( $a>$b )) 
+      then 
+         echo a is greater than b. 
+      else
+         echo a is not greater than b. 
+   fi 
+   6. **‘>=’ Operator:** Greater than or equal to operator returns true if the first operand is greater than or equal to the second operand otherwise returns false.
+        if(( $a>=$b )) 
+        then 
+            echo a is greater than or equal to b. 
+        else
+            echo a is not greater than or equal to b. 
+        fi 
+   
 **Logical Operators:** <br>
    They are commonly referred to as boolean operators and serve for executing logical operations. <br> 
    They are classified into three types:
    
    1. **Logical AND (&&):** This is a binary operator, which returns true if both the operands are true otherwise returns false. <br>
-   2. **Logical OR (||):** This is a binary operator, which returns true if either of the operands is true or both the operands are true and returns false if none of them is false.       <br>
+      ```
+      if(($a == "true" & $b == "true" )) 
+      then 
+      echo Both are true. 
+      else
+      echo Both are not true. 
+      fi
+      ```
+      **Output:** Both are true.
+   2. **Logical OR (||):** This is a binary operator, which returns true if either of the operands is true or both the operands are true and returns false if all of them is false.
+      ```
+      if(($a == "true" || $b == "true" )) 
+      then 
+      echo At least one of them is true. 
+      else
+      echo None of them is true.
+      fi 
+      ```
+      **Output:** At least one of them is true.
    3. **Not Equal to (!):** This is a unary operator which returns true if the operand is false and returns false if the operand is true.
-     
+      ```
+      if(( ! $a == "true"  )) 
+      then 
+      echo "a" was initially false. 
+      else
+      echo "a" was initially true. 
+      fi 
+      ```
+      **Output:** a was initially true.
 
+ **File Test Operator:** These operators are used to test a particular property of a file.
+
+   **-b operator:** This operator checks whether a file is a block special file or not. It returns true if the file is a block special file otherwise false.
+
+   **-c operator:** This operator checks whether a file is a character special file or not. It returns true if it is a character special file otherwise false.
    
+   **-d operator:** This operator checks if the given directory exists or not. If it exists then the operator returns true otherwise false.
+   
+   **-e operator:** This operator checks whether the given file exists or not. If it exits this operator returns true otherwise false.
+       if [ -e $FileName ] 
+    then 
+       echo File Exist 
+    else
+       echo File does not exist    
+    fi 
+   **-r operator:** This operator checks whether the given file has read access or not. If it has read access then it returns true otherwise false.
+   if [ -r $FileName ] 
+   then 
+      echo The given file has read access. 
+   else
+      echo The given file does not have read access. 
+   fi 
+   **-w operator:** This operator checks whether the given file has write access or not. If it has been written then it returns true otherwise false.
+   if [ -w $FileName ] 
+   then 
+      echo The given file has write access. 
+   else
+      echo The given file does not have write access. 
+   fi 
+   **-x operator:** This operator checks whether the given file has executed access or not. If it has execute access then it returns true otherwise false.
+   if [ -x $FileName ] 
+   then 
+      echo The given file has to execute access. 
+   else
+      echo The given file does not have execute access. 
+   fi 
+   **-s operator:** This operator checks the size of the given file. If the size of the given file is greater than 0 then it returns true otherwise it is false.
+   if [ -s $FileName ] 
+   then 
+      echo The given file is not empty. 
+   else
+      echo The given file is empty. 
+   fi 
+
+
+  
+
+  
+
+  
+
+  
 
    
    
