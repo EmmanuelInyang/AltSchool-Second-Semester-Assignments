@@ -190,49 +190,68 @@ Some bash operators include: <br>
       ```
       **Output:** a was initially true.
 
- **File Test Operator:** These operators are used to test a particular property of a file.
+**File Test Operator:** These operators are used to test a particular property of a file.
 
    **-b operator:** This operator checks whether a file is a block special file or not. It returns true if the file is a block special file otherwise false.
+      if [ -b "$block_device" ]; then
+         echo "The file $block_device is a block special file."
+      else
+         echo "The file $block_device is not a block special file."
+      fi
 
    **-c operator:** This operator checks whether a file is a character special file or not. It returns true if it is a character special file otherwise false.
-   
+      if [ -c "$device_file" ]; then
+         echo "The file $device_file is a character special file."
+      else
+         echo "The file $device_file is not a character special file."
+      fi
+      
    **-d operator:** This operator checks if the given directory exists or not. If it exists then the operator returns true otherwise false.
+      if [ -d "$directory" ]; then
+         echo "The directory $directory exists."
+      else
+         echo "The directory $directory does not exist."
+      fi
    
    **-e operator:** This operator checks whether the given file exists or not. If it exits this operator returns true otherwise false.
-       if [ -e $FileName ] 
-    then 
-       echo File Exist 
-    else
-       echo File does not exist    
-    fi 
+      if [ -e $FileName ] 
+       then 
+          echo File Exist 
+       else
+          echo File does not exist    
+       fi 
+  
    **-r operator:** This operator checks whether the given file has read access or not. If it has read access then it returns true otherwise false.
-   if [ -r $FileName ] 
-   then 
-      echo The given file has read access. 
-   else
-      echo The given file does not have read access. 
-   fi 
+      if [ -r $FileName ] 
+      then 
+         echo The given file has read access. 
+      else
+         echo The given file does not have read access. 
+      fi 
+   
    **-w operator:** This operator checks whether the given file has write access or not. If it has been written then it returns true otherwise false.
-   if [ -w $FileName ] 
-   then 
-      echo The given file has write access. 
-   else
-      echo The given file does not have write access. 
-   fi 
+      if [ -w $FileName ] 
+      then 
+         echo The given file has write access. 
+      else
+         echo The given file does not have write access. 
+      fi 
+   
    **-x operator:** This operator checks whether the given file has executed access or not. If it has execute access then it returns true otherwise false.
-   if [ -x $FileName ] 
-   then 
-      echo The given file has to execute access. 
-   else
-      echo The given file does not have execute access. 
-   fi 
+      if [ -x $FileName ] 
+      then 
+         echo The given file has to execute access. 
+      else
+         echo The given file does not have execute access. 
+      fi 
+   
    **-s operator:** This operator checks the size of the given file. If the size of the given file is greater than 0 then it returns true otherwise it is false.
-   if [ -s $FileName ] 
-   then 
-      echo The given file is not empty. 
-   else
-      echo The given file is empty. 
-   fi 
+      if [ -s $FileName ] 
+      then 
+         echo The given file is not empty. 
+      else
+         echo The given file is empty. 
+      fi 
 
 
   
