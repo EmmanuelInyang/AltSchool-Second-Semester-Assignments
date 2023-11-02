@@ -18,7 +18,7 @@ Some bash operators include: <br>
       Sum = 14
       <br>
       <br>
-      **Subtraction:** It subtracts the second operand from the first one.
+   - **Subtraction:** It subtracts the second operand from the first one.
       ```
       Difference=$((10-3))  
       echo "Difference = $Difference"
@@ -26,7 +26,8 @@ Some bash operators include: <br>
       **Output:**
       Difference = 7 
       <br>
-      **Multiplication:** Multiply two operands.
+      <br>
+   - **Multiplication:** Multiply two operands.
       ```
       Product=$((10*3))  
       echo "Product = $Product" 
@@ -34,7 +35,8 @@ Some bash operators include: <br>
       **Output**
       Product = 30
       <br>
-      **Division:** Return the quotient after diving the first operand from the second operand.
+      <br>
+   - **Division:** Return the quotient after diving the first operand from the second operand.
    ```
    Division=$((10/3))
    ```
