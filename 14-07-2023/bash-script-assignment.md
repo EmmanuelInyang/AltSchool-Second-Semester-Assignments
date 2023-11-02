@@ -56,7 +56,7 @@ Some bash operators include: <br>
      <br>
 - **Increment by a constant:** Increment value of the first operand with given constant value.
      ```
-     echo "Incrementing x by 10, then x= "  
+     echo "Incrementing x by 10, then x=10"  
      (( x += 10 ))    
      echo $x
      ```
@@ -64,15 +64,39 @@ Some bash operators include: <br>
      <br>
      <br>
 - **Decrement by a constant:** Decrement value of the first operand with a given constant value.
+     ```
+     echo "Decrementing x by 15, then x=10"  
+     (( x -= 15 ))  
+     echo $x  
+     ```
+     **Output:** 5
      <br>
      <br>
-- **Multiply by constant:**
+- **Multiply by constant:** Multiply the given operand with the constant value.
+     ```
+     echo "Multiply of x by 2, then x= 10"  
+     (( x *= 2 ))
+     ```
+     **Output:** 200
      <br>
      <br>
-- **Divide by a constant:** Multiply the given operand with the constant value.
+- **Divide by a constant:** Divide the operand with the given constant value and return the quotient.
+     ```
+     echo "Dividing x by 5, x=10"  
+     (( x /= 5 ))  
+     echo $x 
+     ```
+     **Output:** 2
      <br>
      <br>
-- **Remainder by dividing with a constant:**
+- **Remainder by dividing with a constant:** Divide the operand with the given constant value and return the remainder
+     ```
+     echo "Remainder of Dividing x by 5, x=10"  
+     (( x %= 5 ))  
+     echo $x  
+     ```
+     **Output:** 2
+  
       <br>
       <br>
 - **Exponentiation:** The result is the second operand raised to the power of the first operand.
@@ -82,9 +106,14 @@ Some bash operators include: <br>
      ```
      **Output**
      Exponential = 100
-     
-     
-     
+
+**Logical Operators** <br>
+   They are commonly referred to as boolean operators and serve for executing logical operations. <br> 
+   They are classified into three types:
+   
+   **Logical AND (&&):** This is a binary operator, which returns true if both the operands are true otherwise returns false.
+   **Logical OR (||):** This is a binary operator, which returns true if either of the operands is true or both the operands are true and returns false if none of them is false.
+   **Not Equal to (!):** This is a unary operator which returns true if the operand is false and returns false if the operand is true.
      
 
    
