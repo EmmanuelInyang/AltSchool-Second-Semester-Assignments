@@ -37,12 +37,12 @@ Some bash operators include: <br>
       <br>
       <br>
    - **Division:** Return the quotient after diving the first operand from the second operand.
-   ```
-   Division=$((10/3))
-   ```
-   echo "Division = $Division"
-   **Outout**
-   Division = 3
+      ```
+      Division=$((10/3))
+      echo "Division = $Division"
+      ```
+      **Outout**
+      Division = 3
 
    
 
