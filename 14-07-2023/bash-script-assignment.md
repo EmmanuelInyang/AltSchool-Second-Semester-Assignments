@@ -107,13 +107,13 @@ Some bash operators include: <br>
      **Output**
      Exponential = 100
 
-**Logical Operators** <br>
+**Logical Operators:** <br>
    They are commonly referred to as boolean operators and serve for executing logical operations. <br> 
    They are classified into three types:
    
-   **Logical AND (&&):** This is a binary operator, which returns true if both the operands are true otherwise returns false. <br>
-   **Logical OR (||):** This is a binary operator, which returns true if either of the operands is true or both the operands are true and returns false if none of them is false. <br>
-   **Not Equal to (!):** This is a unary operator which returns true if the operand is false and returns false if the operand is true.
+   - **Logical AND (&&):** This is a binary operator, which returns true if both the operands are true otherwise returns false. <br>
+   - **Logical OR (||):** This is a binary operator, which returns true if either of the operands is true or both the operands are true and returns false if none of them is false. <br>
+   - **Not Equal to (!):** This is a unary operator which returns true if the operand is false and returns false if the operand is true.
      
 
    
