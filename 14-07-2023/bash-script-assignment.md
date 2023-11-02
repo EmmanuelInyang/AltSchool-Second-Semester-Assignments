@@ -192,28 +192,28 @@ Some bash operators include: <br>
 
 **File Test Operator:** These operators are used to test a particular property of a file.
 
-   **-b operator:** This operator checks whether a file is a block special file or not. It returns true if the file is a block special file otherwise false.
+   **-b operator:** This operator checks whether a file is a block special file or not. It returns true if the file is a block special file otherwise false. <br>
       if [ -b "$block_device" ]; then
          echo "The file $block_device is a block special file."
       else
          echo "The file $block_device is not a block special file."
       fi
 
-   **-c operator:** This operator checks whether a file is a character special file or not. It returns true if it is a character special file otherwise false.
+   **-c operator:** This operator checks whether a file is a character special file or not. It returns true if it is a character special file otherwise false. <br>
       if [ -c "$device_file" ]; then
          echo "The file $device_file is a character special file."
       else
          echo "The file $device_file is not a character special file."
       fi
       
-   **-d operator:** This operator checks if the given directory exists or not. If it exists then the operator returns true otherwise false.
+   **-d operator:** This operator checks if the given directory exists or not. If it exists then the operator returns true otherwise false. <br>
       if [ -d "$directory" ]; then
          echo "The directory $directory exists."
       else
          echo "The directory $directory does not exist."
       fi
    
-   **-e operator:** This operator checks whether the given file exists or not. If it exits this operator returns true otherwise false.
+   **-e operator:** This operator checks whether the given file exists or not. If it exits this operator returns true otherwise false. <br>
       if [ -e $FileName ] 
        then 
           echo File Exist 
@@ -221,7 +221,7 @@ Some bash operators include: <br>
           echo File does not exist    
        fi 
   
-   **-r operator:** This operator checks whether the given file has read access or not. If it has read access then it returns true otherwise false.
+   **-r operator:** This operator checks whether the given file has read access or not. If it has read access then it returns true otherwise false. <br>
       if [ -r $FileName ] 
       then 
          echo The given file has read access. 
@@ -229,7 +229,7 @@ Some bash operators include: <br>
          echo The given file does not have read access. 
       fi 
    
-   **-w operator:** This operator checks whether the given file has write access or not. If it has been written then it returns true otherwise false.
+   **-w operator:** This operator checks whether the given file has write access or not. If it has been written then it returns true otherwise false. <br>
       if [ -w $FileName ] 
       then 
          echo The given file has write access. 
@@ -237,7 +237,7 @@ Some bash operators include: <br>
          echo The given file does not have write access. 
       fi 
    
-   **-x operator:** This operator checks whether the given file has executed access or not. If it has execute access then it returns true otherwise false.
+   **-x operator:** This operator checks whether the given file has executed access or not. If it has execute access then it returns true otherwise false. <br>
       if [ -x $FileName ] 
       then 
          echo The given file has to execute access. 
@@ -245,7 +245,7 @@ Some bash operators include: <br>
          echo The given file does not have execute access. 
       fi 
    
-   **-s operator:** This operator checks the size of the given file. If the size of the given file is greater than 0 then it returns true otherwise it is false.
+   **-s operator:** This operator checks the size of the given file. If the size of the given file is greater than 0 then it returns true otherwise it is false. <br>
       if [ -s $FileName ] 
       then 
          echo The given file is not empty. 
