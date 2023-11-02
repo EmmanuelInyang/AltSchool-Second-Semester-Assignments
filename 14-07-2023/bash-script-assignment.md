@@ -226,14 +226,14 @@ Some bash operators include: <br>
        fi 
      ```
    - **-r operator:** This operator checks whether the given file has read access or not. If it has read access then it returns true otherwise false. <br>
-     ```
+      ```
       if [ -r $FileName ] 
       then 
          echo The given file has read access. 
       else
          echo The given file does not have read access. 
       fi 
-    ```
+      ```
    - **-w operator:** This operator checks whether the given file has write access or not. If it has been written then it returns true otherwise false. <br>
       ```
       if [ -w $FileName ] 
