@@ -1,9 +1,9 @@
 **Bash operators** are symbols used in scripting to perform operations on values and variables, often combined with commands for various tasks, comparisons, and conditions.
 
-Some bash operators include:
-**1. Arithmetic Operators**
-**2. Logical Operators**
-**3. Relational Operators**
+Some bash operators include: <br>
+**1. Arithmetic Operators** <br>
+**2. Logical Operators** <br>
+**3. Relational Operators** <br>
 **4. File Operators**
 
 **Arithmetic Operators:** <br>
