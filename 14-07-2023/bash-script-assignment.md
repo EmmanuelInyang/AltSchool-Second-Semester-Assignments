@@ -8,6 +8,7 @@ Some bash operators include: <br>
 
 **Arithmetic Operators:** <br>
    Bash scripts support 11 arithmetic operators, which include addition, subtraction, multiplication, division, modulo, increment by a constant, decrement by a constant, multiply by a constant, divide by a constant, remainder by dividing with a constant, and exponentiation. <br>
+   <br>
    The 11 arithmetic operators are explained with examples below: <br>
    **Addition:** It adds two operands. <br>
    ```
