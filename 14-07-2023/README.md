@@ -8,4 +8,4 @@
 - Create another user and make sure that this user doesn't have a home directory.
 
 **Bash Script Assignment Question**
-List and briefly describe file some operators.
+- List and briefly describe file some operators used in Bash scripting.
