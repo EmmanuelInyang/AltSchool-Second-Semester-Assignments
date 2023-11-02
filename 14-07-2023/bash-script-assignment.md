@@ -106,7 +106,7 @@ Some bash operators include: <br>
      ```
      **Output**
      Exponential = 100
-
+   <br>
 **Logical Operators:** <br>
    They are commonly referred to as boolean operators and serve for executing logical operations. <br> 
    They are classified into three types:
