@@ -8,4 +8,4 @@
 - Create another user and make sure that this user doesn't have a home directory.
 
 **Bash Script Assignment Question**
-- Describe at least 15 operators used in Bash scripting.
+- Describe at least 15 operators used in Bash script.
