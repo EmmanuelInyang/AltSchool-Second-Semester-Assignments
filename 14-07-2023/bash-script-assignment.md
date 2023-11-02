@@ -14,5 +14,13 @@ Some bash operators include: <br>
    Sum=$((10+4))  
    echo "Sum = $Sum"
    ```
-   **Output**
+   **Output:**
    Sum = 14
+<br>
+   **Subtraction:** It subtracts the second operand from the first one.
+   ```
+   Difference=$((10-3))  
+   echo "Difference = $Difference"
+   ```
+   **Output:**
+   Difference = 7 
