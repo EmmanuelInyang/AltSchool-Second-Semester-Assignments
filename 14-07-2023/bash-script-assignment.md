@@ -18,6 +18,7 @@ Some bash operators include: <br>
    **Output:**
    Sum = 14
    <br>
+   <br>
    **Subtraction:** It subtracts the second operand from the first one.
    ```
    Difference=$((10-3))  
