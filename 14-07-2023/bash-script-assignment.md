@@ -10,7 +10,7 @@ Some bash operators include: <br>
    Bash scripts support 11 arithmetic operators, which include addition, subtraction, multiplication, division, modulo, increment by a constant, decrement by a constant, multiply by a constant, divide by a constant, remainder by dividing with a constant, and exponentiation. <br>
    The 11 arithmetic operators are explained with examples below: <br>
    <br>
-   **Addition:** It adds two operands. <br>
+   - **Addition:** It adds two operands. <br>
    ```
    Sum=$((10+4))  
    echo "Sum = $Sum"
