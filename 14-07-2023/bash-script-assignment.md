@@ -1,5 +1,5 @@
 ## File Operators in Bash script
-1. **-e operator:**
+1. **-e operator:** <br>
    The -e file operator is used to check if a file exists. It returns true if the file exists and false if it doesn't.
    Here's an example of how it's used in a Bash script:
      ```
