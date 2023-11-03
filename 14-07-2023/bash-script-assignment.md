@@ -233,18 +233,18 @@ For example, you can use the -nt operator to compare two files, "file1.txt" and 
 15. **-ot operator** <br>
    The -ot file operator in Bash script is used to compare the modification timestamps of two files and determine if one file is older than another. Specifically, it checks if the file on the left side of the operator is older (modified earlier) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
 Here's the basic syntax for using the -ot file operator:
-   ```
-   [ file1 -ot file2 ]
-   ```
-`[` and `]` are used to enclose the file test expression.
-`file1` and `file2` are the two files you want to compare. You should replace them with the actual file paths.
+      ```
+      [ file1 -ot file2 ]
+      ```
+      `[` and `]` are used to enclose the file test expression.
+      `file1` and `file2` are the two files you want to compare. You should replace them with the actual file paths.
 For example, you can use the -ot operator to compare two files, "file1.txt" and "file2.txt," to check if "file1.txt" is older:
-   ```   
-   if [ "file1.txt" -ot "file2.txt" ]; then
-      echo "file1.txt is older than file2.txt."
-   else
-      echo "file2.txt is older than file1.txt or they have the same modification time."
-   fi
-   ```
+      ```   
+      if [ "file1.txt" -ot "file2.txt" ]; then
+         echo "file1.txt is older than file2.txt."
+      else
+         echo "file2.txt is older than file1.txt or they have the same modification time."
+      fi
+      ```
 
    
