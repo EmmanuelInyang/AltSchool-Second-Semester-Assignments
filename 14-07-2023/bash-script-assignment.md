@@ -127,7 +127,7 @@
          echo "The file is not a symbolic link."
       fi
       ```
-   In this script, you replace "/path/to/symbolic_link" with the actual path to the file you want to check. The script will determine whether the specified file is a symbolic link and print the corresponding message.
+   The script will determine whether the specified file is a symbolic link and print the corresponding message.
 
 9. **-c operator** <br>
     the -c file operator is used to check whether a file is a special character file. Special character files are typically associated with devices in Unix-like systems. These files provide access to various devices such as terminals, serial ports, or sound cards. The -c operator checks if a file is a special character file, and it returns true if the file is of this type. If the file is not a special character file or if it doesn't exist, the operator returns false.
