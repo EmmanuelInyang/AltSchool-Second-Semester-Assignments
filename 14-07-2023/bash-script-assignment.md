@@ -1,4 +1,18 @@
-**Bash operators** are symbols used in scripting to perform operations on values and variables, often combined with commands for various tasks, comparisons, and conditions.
+## File Operators in Bash script
+- **-e operator** The -e file operator is used to check if a file exists. It returns true if the file exists and false if it doesn't.
+  Here's an example of how it's used in a Bash script:
+      ```
+      #!/bin/bash
+
+      file_path="/path/to/your/file.txt"
+  
+      if [ -e "$file_path" ]; then
+         echo "The file exists."
+      else
+         echo "The file does not exist."
+      fi
+      ```
+
 
 Some bash operators include: <br>
 **1. Arithmetic Operators** <br>
