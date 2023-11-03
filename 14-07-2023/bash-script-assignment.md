@@ -12,8 +12,7 @@
          echo "The file does not exist."
       fi
   ```
-  In this script, the -e operator is used to check if the file located at the specified path exists. If it does, it prints "The file exists," and if it doesn't, it prints "The     
-  file does not exist."
+  In this script, the -e operator is used to check if the file located at the specified path exists. If it does, it prints "The file exists," and if it doesn't, it prints "The file does not exist."
 
 Some bash operators include: <br>
 **1. Arithmetic Operators** <br>
