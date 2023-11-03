@@ -183,11 +183,11 @@ Here's how you can use the -u file operator in a Bash script:
 12. **-ef operator** <br>
   -ef (Equivalent Files): This operator checks if two files are equivalent, meaning they have the same device and inode numbers. It’s often used to check if two files are hard links to the same data.
 Example:
-   ```
-   if [ "file1.txt" -ef "file2.txt" ]; then
-      echo "file1.txt and file2.txt are hard links to the same data."
-   fi
-   ```
+      ```
+      if [ "file1.txt" -ef "file2.txt" ]; then
+         echo "file1.txt and file2.txt are hard links to the same data."
+      fi
+      ```
  
 13. **-G operator** <br>
     The -G file operator in Bash script is used to check whether a file exists and whether it has the set-group-ID (SGID) permission set. The SGID permission on a file means that when the file is executed, it runs with the privileges of the group that owns the file rather than with the privileges of the user who executes it. This operator is useful for determining whether a file is set to execute with group permissions.
