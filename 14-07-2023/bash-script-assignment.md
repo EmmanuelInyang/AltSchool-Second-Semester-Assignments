@@ -1,5 +1,5 @@
 ## File Operators in Bash script
-- **-e operator** The -e file operator is used to check if a file exists. It returns true if the file exists and false if it doesn't.
+- **-e operator:** The -e file operator is used to check if a file exists. It returns true if the file exists and false if it doesn't.
   Here's an example of how it's used in a Bash script:
   ```
       #!/bin/bash
@@ -12,8 +12,8 @@
          echo "The file does not exist."
       fi
   ```
-      In this script, the -e operator is used to check if the file located at the specified path exists. If it does, it prints "The file exists," and if it doesn't, it prints "The     
-      file does not exist."
+  In this script, the -e operator is used to check if the file located at the specified path exists. If it does, it prints "The file exists," and if it doesn't, it prints "The     
+  file does not exist."
 
 Some bash operators include: <br>
 **1. Arithmetic Operators** <br>
