@@ -31,279 +31,218 @@
       ```
       In this script, the -f operator checks if the file at the specified path exists and is a regular file. If it is, it prints "The file exists and is a regular file." If the file does not exist or is not a regular file, it prints "The file does not exist or is not a regular file.
 
+3. **-d operator** <br>
+   The -d file operator is used to check if a directory exists.
+   Here's an example of how it's used in a Bash script:
+      ```
+      #!/bin/bash
 
+      directory_path="/altschool/exam"
 
-
-
-Some bash operators include: <br>
-**1. Arithmetic Operators** <br>
-**2. Logical Operators** <br>
-**3. Relational Operators** <br>
-**4. File Operators**
-
-**Arithmetic Operators:** <br>
-   Bash scripts support 11 arithmetic operators, which include addition, subtraction, multiplication, division, modulo, increment by a constant, decrement by a constant, multiply by a constant, divide by a constant, remainder by dividing with a constant, and exponentiation. <br>
-   The 11 arithmetic operators are explained with examples below: <br>
-   - **Addition:** It adds two operands. <br>
-      ```
-      Sum=$((10+4))  
-      echo "Sum = $Sum"
-      ```
-      **Output:**
-      Sum = 14
-      <br>
-      <br>
-   - **Subtraction:** It subtracts the second operand from the first one.
-      ```
-      Difference=$((10-3))  
-      echo "Difference = $Difference"
-      ```
-      **Output:**
-      Difference = 7 
-      <br>
-      <br>
-   - **Multiplication:** Multiply two operands.
-      ```
-      Product=$((10*3))  
-      echo "Product = $Product" 
-      ```
-      **Output**
-      Product = 30
-      <br>
-      <br>
-   - **Division:** Return the quotient after diving the first operand from the second operand.
-      ```
-      Division=$((10/3))
-      echo "Division = $Division"
-      ```
-      **Outout**
-      Division = 3
-      <br>
-      <br>
-   - **Modulo:** Return remainder after dividing the first operand from the second operand.
-      ```
-      Modulo=$((10%3))  
-      echo "Modulo = $Modulo"
-      ```
-      **Output**
-      Modulo = 1
-     <br>
-     <br>
-- **Increment by a constant:** Increment value of the first operand with given constant value.
-     ```
-     echo "Incrementing x by 10, then x=10"  
-     (( x += 10 ))    
-     echo $x
-     ```
-     **Output:** 20  
-     <br>
-     <br>
-- **Decrement by a constant:** Decrement value of the first operand with a given constant value.
-     ```
-     echo "Decrementing x by 15, then x=10"  
-     (( x -= 15 ))  
-     echo $x  
-     ```
-     **Output:** 5
-     <br>
-     <br>
-- **Multiply by constant:** Multiply the given operand with the constant value.
-     ```
-     echo "Multiply of x by 2, then x= 10"  
-     (( x *= 2 ))
-     ```
-     **Output:** 200
-     <br>
-     <br>
-- **Divide by a constant:** Divide the operand with the given constant value and return the quotient.
-     ```
-     echo "Dividing x by 5, x=10"  
-     (( x /= 5 ))  
-     echo $x 
-     ```
-     **Output:** 2
-     <br>
-     <br>
-- **Remainder by dividing with a constant:** Divide the operand with the given constant value and return the remainder
-     ```
-     echo "Remainder of Dividing x by 5, x=10"  
-     (( x %= 5 ))  
-     echo $x  
-     ```
-     **Output:** 2
-  
-      <br>
-      <br>
-- **Exponentiation:** The result is the second operand raised to the power of the first operand.
-     ```
-     Exponent=$((10**2))  
-     echo "Exponent = $Exponent"
-     ```
-     **Output**
-     Exponential = 100
-
-**Relational Operators:**
-   Relational operators are those operators which define the relation between two operands. They give either true or false depending upon the relation. They are of 6 types:
-
-   1. **‘==’ Operator:** Double equal to operator compares the two operands. It returns true if they are equal otherwise returns false.
-      ```
-      if(( $a==$b )) 
-      then 
-         echo a is equal to b. 
-      else  
-         echo a is not equal to b. 
+      if [ -d "$directory_path" ]; then
+          echo "The directory exists."
+      else
+          echo "The directory does not exist."
       fi
       ```
-   2. **‘!=’ Operator:** Not Equal to operator return true if the two operands are not equal otherwise it returns false.
-       if(( $a!=$b )) 
-       then 
-          echo a is not equal to b. 
-       else
-          echo a is equal to b. 
-   fi 
-   3. **‘<‘ Operator:** Less than operator returns true if the first operand is less than the second operand otherwise returns false.
-      if(( $a<$b )) 
-      then 
-         echo a is less than b. 
-      else
-         echo a is not less than b. 
-      fi 
-   4. **‘<=’ Operator:** Less than or equal to the operator returns true if the first operand is less than or equal to the second operand otherwise returns false.
-      if(( $a<=$b )) 
-      then 
-         echo a is less than or equal to b. 
-      else
-         echo a is not less than or equal to b. 
-   fi 
-   5 **‘>’ Operator:** Greater than operator returns true if the first operand is greater than the second operand otherwise returns false.
-      if(( $a>$b )) 
-      then 
-         echo a is greater than b. 
-      else
-         echo a is not greater than b. 
-   fi 
-   6. **‘>=’ Operator:** Greater than or equal to operator returns true if the first operand is greater than or equal to the second operand otherwise returns false.
-        if(( $a>=$b )) 
-        then 
-            echo a is greater than or equal to b. 
-        else
-            echo a is not greater than or equal to b. 
-        fi 
-   
-**Logical Operators:** <br>
-   They are commonly referred to as boolean operators and serve for executing logical operations. <br> 
-   They are classified into three types:
-   
-   1. **Logical AND (&&):** This is a binary operator, which returns true if both the operands are true otherwise returns false. <br>
+      In this script, the -d operator checks if the directory at the specified path exists. If it does, it prints "The directory exists." If the directory does not exist, it prints "The directory does not exist."
+
+4. **-s operator** <br>
+   The -s file operator is used to check if a file exists and has a size greater than zero (i.e., it's not empty).
+   Here's an example of how it's used in a Bash script:
       ```
-      if(($a == "true" & $b == "true" )) 
-      then 
-      echo Both are true. 
+      #!/bin/bash
+
+      file_path="/altschool/exam/semester-two.txt"
+
+      if [ -s "$file_path" ]; then
+          echo "The file exists and is not empty."
       else
-      echo Both are not true. 
+          echo "The file does not exist or is empty."
       fi
       ```
-      **Output:** Both are true.
-   2. **Logical OR (||):** This is a binary operator, which returns true if either of the operands is true or both the operands are true and returns false if all of them is false.
-      ```
-      if(($a == "true" || $b == "true" )) 
-      then 
-      echo At least one of them is true. 
-      else
-      echo None of them is true.
-      fi 
-      ```
-      **Output:** At least one of them is true.
-   3. **Not Equal to (!):** This is a unary operator which returns true if the operand is false and returns false if the operand is true.
-      ```
-      if(( ! $a == "true"  )) 
-      then 
-      echo "a" was initially false. 
-      else
-      echo "a" was initially true. 
-      fi 
-      ```
-      **Output:** a was initially true.
+   In this script, the -s operator checks if the file at the specified path exists and has a size greater than zero. If the file exists and is not empty, it prints "The file exists and is not empty." If the file does not exist or is empty, it prints "The file does not exist or is empty."
 
-**File Test Operator:** These operators are used to test a particular property of a file.
-
-   - **-b operator:** This operator checks whether a file is a block special file or not. It returns true if the file is a block special file otherwise false. <br>
+5. **-r operator** <br>
+   The -r file operator is used to check if a file is readable.
+   Here's an example of how it's used in a Bash script:
       ```
-      if [ -b "$block_device" ]; then
-         echo "The file $block_device is a block special file."
+      #!/bin/bash
+
+      file_path="/altschool/exam/semester-two.txt"
+      
+      if [ -r "$file_path" ]; then
+          echo "The file is readable."
       else
-         echo "The file $block_device is not a block special file."
+          echo "The file is not readable."
       fi
       ```
-   - **-c operator:** This operator checks whether a file is a character special file or not. It returns true if it is a character special file otherwise false. <br>
+      In this script, the -r operator checks if the file at the specified path is readable. If the file is readable, it prints "The file is readable." If the file is not readable, it prints "The file is not readable."
+
+6. **-w operator** <br>
+   The -w file operator is used to check if a file is writable.
+   Here's an example of how it's used in a Bash script:
       ```
-      if [ -c "$device_file" ]; then
-         echo "The file $device_file is a character special file."
+      #!/bin/bash
+
+      file_path="/altschool/exam/semester-two.txt"
+
+      if [ -w "$file_path" ]; then
+          echo "The file is writable."
       else
-         echo "The file $device_file is not a character special file."
+          echo "The file is not writable."
       fi
       ```
-   - **-d operator:** This operator checks if the given directory exists or not. If it exists then the operator returns true otherwise false. <br>
+      In this script, the -w operator checks if the file at the specified path is writable. If the file is writable, it prints "The file is writable." If the file is not writable, it prints "The file is not writable."
+
+7. **-x operator** <br>
+   The -x file operator is used to check if a file is executable.
+   Here's an example of how it's used in a Bash script:
       ```
-      if [ -d "$directory" ]; then
-         echo "The directory $directory exists."
+      #!/bin/bash
+
+      file_path="/path/to/your/script.sh"
+
+      if [ -x "$file_path" ]; then
+         echo "The file is executable."
       else
-         echo "The directory $directory does not exist."
+         echo "The file is not executable."
       fi
-     ```  
-   - **-e operator:** This operator checks whether the given file exists or not. If it exits this operator returns true otherwise false. <br>
-     ```
-      if [ -e $FileName ] 
-       then 
-          echo File Exist 
-       else
-          echo File does not exist    
-       fi 
-     ```
-   - **-r operator:** This operator checks whether the given file has read access or not. If it has read access then it returns true otherwise false. <br>
       ```
-      if [ -r $FileName ] 
-      then 
-         echo The given file has read access. 
+   In this script, the -x operator checks if the file at the specified path is executable. If the file is executable, it prints "The file is executable." If the file is not executable, it prints "The file is not executable."
+
+8. **-l operator** <br>
+    In Bash, the -l file operator checks if a file is a symbolic link.
+    Here's an example:
+      ```
+      #!/bin/bash
+
+      # Define a file path (a symbolic link to a file)
+      file_path="/path/to/symbolic_link"
+
+      # Check if the file is a symbolic link
+      if [ -L "$file_path" ]; then
+         echo "The file is a symbolic link."
       else
-         echo The given file does not have read access. 
-      fi 
+         echo "The file is not a symbolic link."
+      fi
       ```
-   - **-w operator:** This operator checks whether the given file has write access or not. If it has been written then it returns true otherwise false. <br>
+         In this script, you replace "/path/to/symbolic_link" with the actual path to the file you want to check. The script will determine whether the specified file is a symbolic link and print the corresponding message.
+
+9. **-c operator** <br>
+    the -c file operator is used to check whether a file is a special character file. Special character files are typically associated with devices in Unix-like systems. These files provide access to various devices such as terminals, serial ports, or sound cards. The -c operator checks if a file is a special character file, and it returns true if the file is of this type. If the file is not a special character file or if it doesn't exist, the operator returns false.
+    Here's how you can use the -c file operator in a Bash script:
       ```
-      if [ -w $FileName ] 
-      then 
-         echo The given file has write access. 
+      #!/bin/bash
+
+      # Define the file path to check
+      file_path="/dev/tty"
+
+      # Check if the file is a special character file
+      if [ -c "$file_path" ]; then
+          echo "The file is a special character file."
       else
-         echo The given file does not have write access. 
-      fi 
+          echo "The file is not a special character file or doesn't exist."
+      fi
       ```
-   - **-x operator:** This operator checks whether the given file has executed access or not. If it has execute access then it returns true otherwise false. <br>
+      
+10. **-p operator** <br>
+    The -p file operator is used to check whether a file is a named pipe (also known as a FIFO or First-In-First-Out). Named pipes are a type of special file used for inter-process communication (IPC) on Unix-like systems. They allow data to be passed between processes. The -p operator checks if a file is a named pipe and returns true if the file is indeed a named pipe. If the file is not a named pipe or if it doesn't exist, the operator returns false.
+Here's how you can use the -p file operator in a Bash script:
       ```
-      if [ -x $FileName ] 
-      then 
-         echo The given file has to execute access. 
+      #!/bin/bash
+
+      # Define the file path to check
+      file_path="/tmp/my_named_pipe"
+
+      # Check if the file is a named pipe
+      if [ -p "$file_path" ]; then
+         echo "The file is a named pipe (FIFO)."
       else
-         echo The given file does not have execute access. 
-      fi 
+         echo "The file is not a named pipe or doesn't exist."   
+      fi
       ```
-   - **-s operator:** This operator checks the size of the given file. If the size of the given file is greater than 0 then it returns true otherwise it is false.
+
+11. **-u operator** <br>
+    In Bash scripting, the -u file operator is used to check if a file has the setuid (SUID) permission bit set. The setuid permission bit is a special permission that can be assigned to executable files. When a file has the SUID bit set, it means that when the file is executed, it runs with the permissions of the file's owner, not the permissions of the user who runs it. The -u operator checks whether the SUID bit is set on a file. If the SUID bit is set, the operator returns true. If the SUID bit is not set or the file does not exist, it returns false.
+Here's how you can use the -u file operator in a Bash script:
       ```
-      if [ -s $FileName ] 
-      then 
-         echo The given file is not empty. 
+      #!/bin/bash
+
+      # Define the file path to check
+      file_path="/path/to/my_executable_file"
+
+      # Check if the file has the SUID bit set
+      if [ -u "$file_path" ]; then
+          echo "The file has the SUID (setuid) permission bit set."
       else
-         echo The given file is empty. 
-      fi 
+          echo "The file does not have the SUID (setuid) permission bit set or doesn't exist."
+      fi
       ```
+12. **-g operator** <br>
+  In Bash scripting, the -g file operator is used to check if a file has the setgid (SGID) permission bit set. The setgid permission bit is a special permission that can be assigned to both executable files and directories. When the setgid bit is set on an executable file, it means that the file will run with the permissions of the group that owns the file, rather than the permissions of the user who runs it. When the setgid bit is set on a directory, it means that any new files or directories created within that directory inherit the group ownership of the parent directory. The -g operator checks whether the SGID bit is set on a file or directory. If the SGID bit is set, the operator returns true. If the SGID bit is not set or the file/directory does not exist, it returns false.
+Here's how you can use the -g file operator in a Bash script:
+      ```
+      #!/bin/bash
 
-  
+      # Define the file or directory path to check
+      file_or_dir_path="/path/to/my_executable_file_or_directory"
 
-  
+      # Check if the file or directory has the SGID bit set
+      if [ -g "$file_or_dir_path" ]; then
+          echo "The file or directory has the SGID (setgid) permission bit set."
+      else
+          echo "The file or directory does not have the SGID (setgid) permission bit set or doesn't exist."
+      fi
+      ```
+13. **-G operator** <br>
+    The -G file operator in Bash script is used to check whether a file exists and whether it has the set-group-ID (SGID) permission set. The SGID permission on a file means that when the file is executed, it runs with the privileges of the group that owns the file rather than with the privileges of the user who executes it. This operator is useful for determining whether a file is set to execute with group permissions.
+Here's the basic syntax for using the -G file operator:
+      ```
+      [ -G file ]
+       ```
+`[` and `]` are used to enclose the file test expression.
+`-G` is the file operator itself.
+`file` should be replaced with the path to the file you want to test.
+For example, you can use the -G operator to check if a file named "example.sh" has the SGID permission set:
+   ```
+   if [ -G "example.sh" ]; then
+   echo "The file 'example.sh' has the SGID permission set."
+   else
+      echo "The file 'example.sh' does not have the SGID permission set."
+   fi
+   ```
+14. **-nt operator** <br>
+    The -nt file operator in Bash script is used to compare the modification timestamp of two files and determine if one file is newer than another. Specifically, it checks if the file on the left side of the operator is newer (modified more recently) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
+Here's the basic syntax for using the -nt file operator:
+   ```
+   [ file1 -nt file2 ]
+   ```
+`[` and `]` are used to enclose the file test expression.
+`file1` and `file2` are the two files you want to compare. You should replace them with the actual file paths.
+For example, you can use the -nt operator to compare two files, "file1.txt" and "file2.txt," to check if "file1.txt" is newer:
+   ```
+   if [ "file1.txt" -nt "file2.txt" ]; then
+      echo "file1.txt is newer than file2.txt."
+   else
+      echo "file2.txt is newer than file1.txt or they have the same modification time."
+   fi
 
-  
+15. **-ot operator** <br>
+   The -ot file operator in Bash script is used to compare the modification timestamps of two files and determine if one file is older than another. Specifically, it checks if the file on the left side of the operator is older (modified earlier) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
+Here's the basic syntax for using the -ot file operator:
+   ```
+   [ file1 -ot file2 ]
+   ```
+`[` and `]` are used to enclose the file test expression.
+`file1` and `file2` are the two files you want to compare. You should replace them with the actual file paths.
+For example, you can use the -ot operator to compare two files, "file1.txt" and "file2.txt," to check if "file1.txt" is older:
+   ```   
+   if [ "file1.txt" -ot "file2.txt" ]; then
+      echo "file1.txt is older than file2.txt."
+   else
+      echo "file2.txt is older than file1.txt or they have the same modification time."
+   fi
+   ```
 
-  
-
-   
    
