@@ -179,6 +179,7 @@ Here's how you can use the -u file operator in a Bash script:
           echo "The file does not have the SUID (setuid) permission bit set or doesn't exist."
       fi
       ```
+      
 12. **-g operator** <br>
   In Bash scripting, the -g file operator is used to check if a file has the setgid (SGID) permission bit set. The setgid permission bit is a special permission that can be assigned to both executable files and directories. When the setgid bit is set on an executable file, it means that the file will run with the permissions of the group that owns the file, rather than the permissions of the user who runs it. When the setgid bit is set on a directory, it means that any new files or directories created within that directory inherit the group ownership of the parent directory. The -g operator checks whether the SGID bit is set on a file or directory. If the SGID bit is set, the operator returns true. If the SGID bit is not set or the file/directory does not exist, it returns false.
 Here's how you can use the -g file operator in a Bash script:
@@ -195,40 +196,41 @@ Here's how you can use the -g file operator in a Bash script:
           echo "The file or directory does not have the SGID (setgid) permission bit set or doesn't exist."
       fi
       ```
+      
 13. **-G operator** <br>
     The -G file operator in Bash script is used to check whether a file exists and whether it has the set-group-ID (SGID) permission set. The SGID permission on a file means that when the file is executed, it runs with the privileges of the group that owns the file rather than with the privileges of the user who executes it. This operator is useful for determining whether a file is set to execute with group permissions.
 Here's the basic syntax for using the -G file operator:
       ```
       [ -G file ]
        ```
-`[` and `]` are used to enclose the file test expression.
-`-G` is the file operator itself.
-`file` should be replaced with the path to the file you want to test.
+      `[` and `]` are used to enclose the file test expression.
+      `-G` is the file operator itself.
+      `file` should be replaced with the path to the file you want to test.
 For example, you can use the -G operator to check if a file named "example.sh" has the SGID permission set:
-   ```
-   if [ -G "example.sh" ]; then
-   echo "The file 'example.sh' has the SGID permission set."
-   else
-      echo "The file 'example.sh' does not have the SGID permission set."
-   fi
-   ```
+      ```
+      if [ -G "example.sh" ]; then
+         echo "The file 'example.sh' has the SGID permission set."
+      else
+         echo "The file 'example.sh' does not have the SGID permission set."
+      fi
+      ```
 
 14. **-nt operator** <br>
     The -nt file operator in Bash script is used to compare the modification timestamp of two files and determine if one file is newer than another. Specifically, it checks if the file on the left side of the operator is newer (modified more recently) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
 Here's the basic syntax for using the -nt file operator:
-   ```
-   [ file1 -nt file2 ]
-   ```
-`[` and `]` are used to enclose the file test expression.
-`file1` and `file2` are the two files you want to compare. You should replace them with the actual file paths.
+      ```
+      [ file1 -nt file2 ]
+      ```
+      `[` and `]` are used to enclose the file test expression.
+      `file1` and `file2` are the two files you want to compare. You should replace them with the actual file paths.
 For example, you can use the -nt operator to compare two files, "file1.txt" and "file2.txt," to check if "file1.txt" is newer:
-   ```
-   if [ "file1.txt" -nt "file2.txt" ]; then
-      echo "file1.txt is newer than file2.txt."
-   else
-      echo "file2.txt is newer than file1.txt or they have the same modification time."
-   fi
-   ```
+      ```
+      if [ "file1.txt" -nt "file2.txt" ]; then
+         echo "file1.txt is newer than file2.txt."
+      else
+         echo "file2.txt is newer than file1.txt or they have the same modification time."
+      fi
+      ```
 
 15. **-ot operator** <br>
    The -ot file operator in Bash script is used to compare the modification timestamps of two files and determine if one file is older than another. Specifically, it checks if the file on the left side of the operator is older (modified earlier) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
