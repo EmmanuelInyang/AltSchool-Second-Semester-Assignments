@@ -212,6 +212,7 @@ For example, you can use the -G operator to check if a file named "example.sh" h
       echo "The file 'example.sh' does not have the SGID permission set."
    fi
    ```
+
 14. **-nt operator** <br>
     The -nt file operator in Bash script is used to compare the modification timestamp of two files and determine if one file is newer than another. Specifically, it checks if the file on the left side of the operator is newer (modified more recently) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
 Here's the basic syntax for using the -nt file operator:
@@ -227,6 +228,7 @@ For example, you can use the -nt operator to compare two files, "file1.txt" and 
    else
       echo "file2.txt is newer than file1.txt or they have the same modification time."
    fi
+   ```
 
 15. **-ot operator** <br>
    The -ot file operator in Bash script is used to compare the modification timestamps of two files and determine if one file is older than another. Specifically, it checks if the file on the left side of the operator is older (modified earlier) than the file on the right side of the operator. This operator is useful for conditional statements in scripts where you need to perform actions based on file modification times.
