@@ -111,8 +111,8 @@
       ```
    In this script, the -x operator checks if the file at the specified path is executable. If the file is executable, it prints "The file is executable." If the file is not executable, it prints "The file is not executable."
 
-8. **-l operator** <br>
-    In Bash, the -l file operator checks if a file is a symbolic link.
+8. **-L operator** <br>
+    In Bash, the -L file operator checks if a file is a symbolic link.
     Here's an example:
       ```
       #!/bin/bash
@@ -127,7 +127,7 @@
          echo "The file is not a symbolic link."
       fi
       ```
-         In this script, you replace "/path/to/symbolic_link" with the actual path to the file you want to check. The script will determine whether the specified file is a symbolic link and print the corresponding message.
+   In this script, you replace "/path/to/symbolic_link" with the actual path to the file you want to check. The script will determine whether the specified file is a symbolic link and print the corresponding message.
 
 9. **-c operator** <br>
     the -c file operator is used to check whether a file is a special character file. Special character files are typically associated with devices in Unix-like systems. These files provide access to various devices such as terminals, serial ports, or sound cards. The -c operator checks if a file is a special character file, and it returns true if the file is of this type. If the file is not a special character file or if it doesn't exist, the operator returns false.
