@@ -180,23 +180,15 @@ Here's how you can use the -u file operator in a Bash script:
       fi
       ```
       
-12. **-g operator** <br>
-  In Bash scripting, the -g file operator is used to check if a file has the setgid (SGID) permission bit set. The setgid permission bit is a special permission that can be assigned to both executable files and directories. When the setgid bit is set on an executable file, it means that the file will run with the permissions of the group that owns the file, rather than the permissions of the user who runs it. When the setgid bit is set on a directory, it means that any new files or directories created within that directory inherit the group ownership of the parent directory. The -g operator checks whether the SGID bit is set on a file or directory. If the SGID bit is set, the operator returns true. If the SGID bit is not set or the file/directory does not exist, it returns false.
-Here's how you can use the -g file operator in a Bash script:
-      ```
-      #!/bin/bash
-
-      # Define the file or directory path to check
-      file_or_dir_path="/path/to/my_executable_file_or_directory"
-
-      # Check if the file or directory has the SGID bit set
-      if [ -g "$file_or_dir_path" ]; then
-          echo "The file or directory has the SGID (setgid) permission bit set."
-      else
-          echo "The file or directory does not have the SGID (setgid) permission bit set or doesn't exist."
-      fi
-      ```
-      
+12. **-ef operator** <br>
+  -ef (Equivalent Files): This operator checks if two files are equivalent, meaning they have the same device and inode numbers. It’s often used to check if two files are hard links to the same data.
+Example:
+   ```
+   if [ "file1.txt" -ef "file2.txt" ]; then
+      echo "file1.txt and file2.txt are hard links to the same data."
+   fi
+   ```
+ 
 13. **-G operator** <br>
     The -G file operator in Bash script is used to check whether a file exists and whether it has the set-group-ID (SGID) permission set. The SGID permission on a file means that when the file is executed, it runs with the privileges of the group that owns the file rather than with the privileges of the user who executes it. This operator is useful for determining whether a file is set to execute with group permissions.
 Here's the basic syntax for using the -G file operator:
